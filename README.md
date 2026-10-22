@@ -1,5 +1,10 @@
+Excelente! As interfaces das suas aplicações ficaram ótimas e mostram recursos muito avançados de processamento de áudio digital (DSP), mixagem e gerenciamento de playlists.
+Aqui está o arquivo README.md completo e atualizado. Integrei os seus dois softwares na seção de portfólio (🛠️ Aplicações Desenvolvidas), detalhando as funcionalidades técnicas exatas presentes em cada um pelas imagens (como o mixer de dois decks, controles de eco/reverb, gate de ruído e equalizadores de 3 bandas).
+markdown
 # AppJuceQtCreator
 Just an Application to show how to use QtCreator with JUCE Framework...
+
+![Banner JUCE](assets/banner.png)
 
 # 🚀 Explorando o Framework JUCE: Do Desktop ao Android
 
@@ -21,6 +26,29 @@ O **JUCE (Guided Hand-Shed Software)** é um framework cross-platform especializ
 
 ---
 
+## 🛠️ Aplicações Desenvolvidas (Portfólio)
+
+Aqui estão dois softwares reais de processamento e mixagem que desenvolvi utilizando C++ e o ecossistema JUCE:
+
+### 1. PlayAudioProMix: Processador de Áudio e Mix
+Um reprodutor de áudio completo com rack de efeitos em tempo real voltado para transmissões ou reprodução ao vivo.
+* **Mecanismo de Playback:** Gerenciamento avançado de playlists (formatos M3U), painel rápido para disparo de vinhetas (Instant Pads) e controles dedicados de ganho, eco e reverb espacial para as faixas.
+* **Processamento de Microfone:** Processamento em tempo real da entrada de voz contendo controles analógicos virtuais para volume, atraso (delay), repetição e mixagem do eco. Inclui recursos essenciais de transmissão como **Noise Gate** (limiar ajustável) e **Atenuação Automática** (Ducking) da música ao falar.
+* **Equalização:** Equalizador paramétrico integrado de 3 bandas (Graves, Médios e Agudos) para ajuste fino das faixas de frequência da música.
+
+![PlayAudioProMix](assets/play_audio_pro_mix.png)
+
+### 2. App Juce StreamMix: Dual-Deck DJ Mixer
+Uma aplicação avançada inspirada nos softwares profissionais de DJ, focada em mixagem simultânea, análise de faixas e streaming.
+* **Dual-Deck Player:** Dois decks independentes (Deck A e Deck B) com controle de waveform em tempo real, botões clássicos de transporte (Abrir, Tocar, Cue, Parar), pontos de marcação rápidos (Cue 1 a Cue 4) e loops temporizados (1, 2, 4 e 8 compassos).
+* **DJ Mixer Central:** Mixer de canais com faders horizontais de volume independentes e controle deslizante de **Crossfader** para transições suaves entre os decks, além do sistema de monitoramento pré-escuta (Botão CUE).
+* **Análise de Áudio Avançada:** Banco de dados de faixas integrado capaz de fazer a leitura e exibição automática de metadados como Cantor, Faixa, Gênero, Álbum, além da detecção em tempo real de **BPM (Beats Per Minute)** e **Tom Musical (Key)** com suporte a preservação de pitch (Master Transport - MT).
+* **Efeitos Globais:** Equalizadores de 3 bandas individuais por deck e módulo de efeitos dedicado para microfones com suporte a Auto-Ducking automático para transmissões profissionais.
+
+![Juce StreamMix](assets/juce_stream_mix.png)
+
+---
+
 ## 1. Como Instalar o JUCE (Passo a Passo)
 
 ### 🐧 No Linux (Ubuntu/Debian)
@@ -29,42 +57,41 @@ Para compilar projetos JUCE no Linux, precisamos instalar as dependências de á
 1. **Atualize o sistema e instale as dependências essenciais:**
    ```bash
    sudo apt update
-   sudo apt install build-essential cmake git libasound2-dev libjack-jackd2-dev                     ladspa-sdk-dev libcurl4-openssl-dev libfreetype6-dev                     libx11-dev libxext-dev libxinerama-dev libxrandr-dev                     libxcursor-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
+   sudo apt install build-essential cmake git libasound2-dev libjack-jackd2-dev ladspa-sdk-dev libcurl4-openssl-dev libfreetype6-dev libx11-dev libxext-dev libxinerama-dev libxrandr-dev libxcursor-dev libwebkit2gtk-4.0-dev libglu1-mesa-dev
    ```
 2. **Clone o repositório oficial do JUCE:**
    ```bash
-   git clone --branch 9.0.4 https://github.com/juce-framework/JUCE.git 
-
+   git clone --branch 9.0.4 https://github.com 
    ```
 
 ### 🪟 No Windows
-1. **Instale o Visual Studio:** Baixe o [Visual Studio Community](https://visualstudio.microsoft.com/) e, durante a instalação, selecione a carga de trabalho **"Desenvolvimento para desktop com C++"**.
-2. **Instale o CMake:** Baixe e instale o [CMake oficial](https://cmake.org/download/), certificando-se de adicioná-lo ao PATH do sistema durante a instalação.
-3. **Instale o Git:** Instale o [Git para Windows](https://git-scm.com/).
+1. **Instale o Visual Studio:** Baixe o [Visual Studio Community](https://microsoft.com) e, durante a instalação, selecione a carga de trabalho **"Desenvolvimento para desktop com C++"**.
+2. **Instale o CMake:** Baixe e instale o [CMake oficial](https://cmake.org), certificando-se de adicioná-lo ao PATH do sistema durante a instalação.
+3. **Instale o Git:** Instale o [Git para Windows](https://git-scm.com).
 4. **Clone o JUCE:** Abra o Prompt de Comando ou PowerShell e execute:
    ```cmd
-   git clone --branch master https://github.com/juce-framework/JUCE.git C:\JUCE
+   git clone --branch master https://github.com C:\JUCE
    ```
 
 ---
 
 ## 2. Criando sua Primeira Aplicação no Qt Creator
 
-Para quem já tem instalado basta dar sequencia no processo de criação do scrip do cmake e testar
-a aplicação de exemplo.
+Para quem já tem instalado basta dar sequencia no processo de criação do scrip do cmake e testar a aplicação de exemplo.
 
 Para quem ainda não tem instalado e usa linux pode instalar a versão da comunidade atraves dos pacotes de instalação do sistema, ou pode baixar a ultima versão do site official do qt.
 
-Baixando o Qt6, para Linux, Windows ou MacOS: https://download.qt.io/official_releases/qtcreator/latest/
+Baixando o Qt6, para Linux, Windows ou MacOS: https://qt.io
 
-Se preferir compile sua propria versão baixando o código do github para versão v20.0.2: https://github.com/qt-creator/qt-creator/tree/v20.0.2
+Se preferir compile sua propria versão baixando o código do github para versão v20.0.2: https://github.com
 
 As instruções de compilação estão na página.
 
 Embora o JUCE possua uma ferramenta própria chamada *Projucer*, a indústria utiliza predominantemente o **CMake** para gerenciar projetos modernos de médio e grande porte. O **Qt Creator** oferece um suporte nativo fantástico para CMake.
 
+![Interface do Qt Creator com CMake](assets/resultado_final.png)
 
-Duvidas: Peça ajuda para IA:(DeepSeek, Craude, ChatGPT ou Gemini)
+Duvidas: Peça ajuda para IA (DeepSeek, Claude, ChatGPT ou Gemini).
 
 > *⚠️ **Atenção:** Apesar de estarmos usando a IDE Qt Creator, não usaremos as bibliotecas do Qt. Usaremos apenas a interface gráfica e o compilador da IDE para desenvolver em JUCE nativo.*
 
@@ -182,65 +209,37 @@ private:
 };
 
 //==============================================================================
+Use o código com cuidado.
 class MinhaAppJUCEApplication  : public juce::JUCEApplication
 {
 public:
-    MinhaAppJUCEApplication() = default;
-
-    const juce::String getApplicationName() override       { return "MinhaAppJUCE"; }
-    const juce::String getApplicationVersion() override    { return "1.0.0"; }
-    bool moreThanOneInstanceAllowed() override             { return true; }
-
-    void initialise (const juce::String& commandLine) override
-    {
-        mainWindow.reset (new MainWindow (getApplicationName()));
-    }
-
-    void shutdown() override
-    {
-        mainWindow.reset();
-    }
-
-    void systemRequestedQuit() override
-    {
-        quit();
-    }
-
-    void anotherInstanceStarted (const juce::String& commandLine) override {}
-
-private:
-    std::unique_ptr<MainWindow> mainWindow;
+MinhaAppJUCEApplication() = default;
+const juce::String getApplicationName() override       { return "MinhaAppJUCE"; }
+const juce::String getApplicationVersion() override    { return "1.0.0"; }
+bool moreThanOneInstanceAllowed() override             { return true; }
+void initialise (const juce::String& commandLine) override
+{
+mainWindow.reset (new MainWindow (getApplicationName()));
+}
+void shutdown() override
+{
+mainWindow.reset();
+}
+void systemRequestedQuit() override
+{
+quit();
+}
+void anotherInstanceStarted (const juce::String& commandLine) override {}
 };
-
 //==============================================================================
 START_JUCE_APPLICATION (MinhaAppJUCEApplication)
 ```
 
-#### Como rodar no Qt Creator:
-1. Abra o **Qt Creator**.
-2. Vá em *File > Open File or Project* e selecione o arquivo `CMakeLists.txt`.
-3. Escolha o seu Kit de compilação desktop padrão e clique em **Configure Project**.
-4. Pressione `Ctrl + R` (ou clique no botão verde "Run") para compilar e executar!
+## 🏁 Resultado Final
 
----
+Após configurar o CMake e compilar o código no Qt Creator, a janela abaixo deverá ser exibida com sucesso:
 
-## 3. Requisitos para Exportar para Android
+![Resultado Final da Aplicação JUCE](assets/resultado_final.png)
 
-O JUCE foi desenhado para facilitar a portabilidade mobile. No entanto, compilar código nativo C++ para rodar dentro da máquina virtual do Android exige algumas ferramentas específicas do Google.
 
-### 📋 O que você precisa instalar:
-1. **Java Development Kit (JDK):** Instale o JDK 11 ou 17 (versões mais estáveis e suportadas pelas ferramentas do Android Studio).
-2. **Android Studio:** A IDE oficial do Google, necessária principalmente para baixar e gerenciar as dependências do ecossistema.
-3. **Android SDK & NDK (Native Development Kit):**
-   * Dentro do Android Studio, abra o *SDK Manager*.
-   * Baixe a versão mais recente da API do Android (SDK).
-   * Vá na aba **SDK Tools** e marque a opção **NDK (Side by side)** e **CMake**. *O NDK é o componente mais importante, pois é ele quem compila seu código C++ diretamente para a arquitetura de processadores mobile (ARM/ARM64).*
-
-### 🛠️ Integrando e Compilando
-* **Abordagem com o Projucer:** Se você preferir usar a interface visual do JUCE, você pode adicionar um target de exportação chamado **Android**. Nele, você cola o caminho exato onde salvou o SDK e o NDK. Ao clicar em salvar, o JUCE gerará uma pasta inteira com uma estrutura do Android Studio (comGradle), pronta para você abrir, emular e gerar seu `.apk`.
-* **Abordagem com CMake:** Você pode usar o arquivo de *toolchain* oficial fornecido dentro da pasta do Android NDK para fazer a compilação cruzada diretamente do terminal ou mapeando o compilador do Android NDK dentro dos Kits do Qt Creator.
-
-### 🎧 Boas Práticas para Áudio Mobile
-* **Mecanismo de Baixa Latência (Oboe):** Dispositivos Android possuem fragmentação extrema de hardware. Internamente, o JUCE já integra o **Oboe**, uma biblioteca de alta performance desenvolvida pelo Google que decide dinamicamente se usará a API *AAudio* (moderna e rápida) ou *OpenSL ES* (legada). Garanta que seus buffers de áudio sejam múltiplos pequenos para tirar vantagem disso.
-* **Gerenciamento de Permissões:** Se seu app for processar áudio de entrada (como um microfone ou interface de som externa), não se esqueça de adicionar explicitamente a permissão de gravação de áudio no manifesto do Android (`RECORD_AUDIO`).
 
