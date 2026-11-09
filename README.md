@@ -1,6 +1,3 @@
-Excelente! As interfaces das suas aplicações ficaram ótimas e mostram recursos muito avançados de processamento de áudio digital (DSP), mixagem e gerenciamento de playlists.
-Aqui está o arquivo README.md completo e atualizado. Integrei os seus dois softwares na seção de portfólio (🛠️ Aplicações Desenvolvidas), detalhando as funcionalidades técnicas exatas presentes em cada um pelas imagens (como o mixer de dois decks, controles de eco/reverb, gate de ruído e equalizadores de 3 bandas).
-markdown
 # AppJuceQtCreator
 Just an Application to show how to use QtCreator with JUCE Framework...
 
